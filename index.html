@@ -3,20 +3,136 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>:3</title>
+		<title>Isla's Place!!</title>
+		<style type="text/css">
+			h1{
+				font-family: 'Open Sans';
+				color: green;
+				position: absolute;
+				top: 0px;
+				left: 10px;
+			}
+			button{
+				background-color: white;
+				border: 1px solid pink;
+				border-radius: 4px;
+			}
+			#reset {
+				background-color: green;
+				color: white;
+				border: none;
+				border-radius: 4px;
+				position: absolute;
+				top: 35px;
+				left: 460px;
+			}
+			#nome {
+				background-color: pink;
+				color: white;
+				position: absolute;
+				top: 150px;
+				left: 10px;
+			}
+			.balao{
+				border: 1px solid pink;
+				width:500px;
+				position: absolute;
+				top: 190px;
+				left:10px;
+				padding: 5px;
+			}
+			#bem {
+				position: absolute;
+				top: 140px;
+				left: 400px;
+			}
+			#mal {
+				position: absolute;
+				top: 165px;
+				left: 400px;
+			}
+			#prossiga{
+				color: pink;
+				border: none;
+				position: absolute;
+				top: 230px;
+				left: 500px;
+			}
+			img {
+				position: absolute;
+				height: 120px;
+				top: 70px;
+				left: 200px;
+			}
+
+
+		</style>
 	</head>
 	<body>
-		<button id="pao" onclick="hehe()">change your life forever</button>
-		<div id="hihi" class="tenor-gif-embed" data-postid="21302723" data-share-method="host" data-aspect-ratio="0.85625" data-width="50%" >
-			<a href="https://tenor.com/view/buff-cake-gif-21302723">Buff Cake GIF</a>from <a href="https://tenor.com/search/buff+cake-gifs">Buff Cake GIFs</a>
-		</div> 
-		<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-		
+		<h1>Teste foda da islaislaisla</h1>
+		<button id="reset" onclick="reset()">reiniciar</button>
+		<p id="nome" style="font-weight:bold">isla</p>
+
+		<img id="isla" src="isla.png">
+		<img id="vc" src="vc.png">
+
+		<div class="balao">
+			<p id="texto">ola bom dia meu anjo como estas???????</p>
+		</div>
+
+		<button id="bem" onclick="bem()" style="margin-bottom:2px; width:100px;">bem</button>
+		<button id="mal" onclick="mal()" style="width:100px;">mal</button>
+
+		<button id="prossiga" onclick="prosseguir()">▶</button>
+
 		<script type="text/JavaScript">
-			document.getElementById('hihi').hidden = true;
-			function hehe(){
-				document.getElementById('pao').hidden = true;
-				document.getElementById('hihi').hidden = false;
+			document.getElementById('prossiga').hidden = true;
+			document.getElementById('vc').hidden = true;
+			var tabem = false;
+
+			function bem(){
+				tabem = true;
+				document.getElementById('texto').innerHTML = "to bem!!";
+				troca();
+			}
+
+			function mal(){
+				document.getElementById('texto').innerHTML = "to mal...";
+				troca();
+			}
+
+			function troca(){
+				document.getElementById('nome').innerHTML = "voce";
+				document.getElementById('bem').hidden = true;
+				document.getElementById('mal').hidden = true;
+				document.getElementById('prossiga').hidden = false;
+				document.getElementById('isla').hidden = true;
+				document.getElementById('vc').hidden = false;
+
+			}
+
+			function prosseguir(){
+			    document.getElementById('prossiga').hidden = true;
+			    document.getElementById('nome').innerHTML = "isla";
+			    //document.getElementById('texto').innerHTML = "yay";
+					document.getElementById('isla').hidden = false;
+					document.getElementById('vc').hidden = true;
+				if(tabem){
+					document.getElementById('texto').innerHTML = "que bom!!!";
+				}else if(!tabem){
+					document.getElementById('texto').innerHTML = "aaaaa sinto mt :(";
+				}
+			}
+
+			function reset(){
+			    document.getElementById('bem').hidden = false;
+				document.getElementById('mal').hidden = false;
+			    document.getElementById('nome').innerHTML = "isla";
+					document.getElementById('isla').hidden = false;
+					document.getElementById('vc').hidden = true;
+			    document.getElementById('texto').innerHTML = "ola bom dia meu anjo como estas???????";
+			    tabem = false;
+			    document.getElementById('prossiga').hidden = true;
 			}
 		</script>
 	</body>
