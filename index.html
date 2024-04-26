@@ -88,7 +88,6 @@
 
 		<script type="text/JavaScript">
 			document.getElementById('prossiga').hidden = true;
-			var tabem = false;
 
 			function links(){
 				document.getElementById('texto').innerHTML = "links";
@@ -100,25 +99,11 @@
 
 			function prosseguir(){
 			    document.getElementById('prossiga').hidden = true;
-			    document.getElementById('nome').innerHTML = "isla";
-			    //document.getElementById('texto').innerHTML = "yay";
-					document.getElementById('isla').hidden = false;
-					document.getElementById('vc').hidden = true;
-				if(tabem){
-					document.getElementById('texto').innerHTML = "que bom!!!";
-				}else if(!tabem){
-					document.getElementById('texto').innerHTML = "aaaaa sinto mt :(";
 				}
 			}
 
 			function reset(){
-			    document.getElementById('bem').hidden = false;
-				document.getElementById('mal').hidden = false;
-			    document.getElementById('nome').innerHTML = "isla";
-					document.getElementById('isla').hidden = false;
-					document.getElementById('vc').hidden = true;
-			    document.getElementById('texto').innerHTML = "ola bom dia meu anjo como estas???????";
-			    tabem = false;
+			    document.getElementById('texto').innerHTML = "ola reset";
 			    document.getElementById('prossiga').hidden = true;
 			}
 		</script>
