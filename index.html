@@ -70,45 +70,32 @@
 	</head>
 	<body>
 		<h1>Teste foda da islaislaisla</h1>
-		<button id="reset" onclick="reset()">reiniciar</button>
+		<button id="reset" onclick="reset()">home</button>
 		<p id="nome" style="font-weight:bold">isla</p>
 
 		<img id="isla" src="isla.png">
-		<img id="vc" src="vc.png">
 
 		<div class="balao">
-			<p id="texto">ola bom dia meu anjo como estas???????</p>
+			<p id="texto">ola introducao</p>
 		</div>
 
-		<button id="bem" onclick="bem()" style="margin-bottom:2px; width:100px;">bem</button>
-		<button id="mal" onclick="mal()" style="width:100px;">mal</button>
+		<button id="links" onclick="links()" style="margin-bottom:2px; width:100px;">links</button>
+		<button id="importante" onclick="importante()" style="margin-bottom:2px; width:100px;">importante</button>
+		<button id="gostos" onclick="gostos()" style="margin-bottom:2px; width:100px;">gostos</button>
+		<button id="galeria" onclick="galeria()" style="width:100px;">galeria</button>
 
 		<button id="prossiga" onclick="prosseguir()">▶</button>
 
 		<script type="text/JavaScript">
 			document.getElementById('prossiga').hidden = true;
-			document.getElementById('vc').hidden = true;
 			var tabem = false;
 
-			function bem(){
-				tabem = true;
-				document.getElementById('texto').innerHTML = "to bem!!";
-				troca();
+			function links(){
+				document.getElementById('texto').innerHTML = "links";
 			}
 
-			function mal(){
-				document.getElementById('texto').innerHTML = "to mal...";
-				troca();
-			}
-
-			function troca(){
-				document.getElementById('nome').innerHTML = "voce";
-				document.getElementById('bem').hidden = true;
-				document.getElementById('mal').hidden = true;
-				document.getElementById('prossiga').hidden = false;
-				document.getElementById('isla').hidden = true;
-				document.getElementById('vc').hidden = false;
-
+			function importante(){
+				document.getElementById('texto').innerHTML = "importante.";
 			}
 
 			function prosseguir(){
