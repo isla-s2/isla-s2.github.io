@@ -76,7 +76,7 @@
 		<img id="isla" src="isla.png">
 
 		<div class="balao">
-			<p id="texto">ola introducao</p>
+			<p id="texto">ola introducao :D</p>
 		</div>
 
 		<button id="links" onclick="links()" style="margin-bottom:2px; width:100px;">links</button>
@@ -87,8 +87,6 @@
 		<button id="prossiga" onclick="prosseguir()">▶</button>
 
 		<script type="text/JavaScript">
-			document.getElementById('prossiga').hidden = true;
-
 			function links(){
 				document.getElementById('texto').innerHTML = "links";
 			}
@@ -97,14 +95,8 @@
 				document.getElementById('texto').innerHTML = "importante.";
 			}
 
-			function prosseguir(){
-			    document.getElementById('prossiga').hidden = true;
-				}
-			}
-
 			function reset(){
 			    document.getElementById('texto').innerHTML = "ola reset";
-			    document.getElementById('prossiga').hidden = true;
 			}
 		</script>
 	</body>
