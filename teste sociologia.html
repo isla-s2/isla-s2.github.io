@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Teste joguinho sociologia hehe</title>
+		<style type="text/css">
+			#tela{
+				border: 1px solid green;
+				width: 50%;
+				height: 70%;
+				padding: 0px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				max-width: 100%;
+				max-height: 100%;
+				overflow: auto;
+			}
+			.sub{
+				text-align: center;
+				background-color: white;
+				width: 100%;
+				height: 100%;
+				margin: 0px;
+			}
+			#caixa{
+				border: 1px solid green;
+				background-color:pink;
+				margin-left: 20px;
+				margin-right: 20px;
+				text-align: left;
+				float: center;
+				height: 20%;
+				margin-top:0;
+			}
+			#prossiga{
+				color: green;
+				border: none;
+				float: right;
+				background-color: transparent;
+			}
+			#botoes{
+				display:inline-block;
+				width: 20%;
+				background-color: green;
+				margin-bottom:0;
+				padding-bottom: 20px;
+				visibility: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="tela">
+			<div class="sub" id="inicial">
+				<h1 style="margin-top:0px; padding-top:200px;">Título</h1>
+				<button onclick="start()">Começar</button>
+			</div>
+			
+			<div class="sub" id="jogo">
+				<div style="background-color:green; overflow:hidden; padding: 5px;">
+					<span style="float: left; margin-top=0; height: 25px;" id="contagem"></span>
+					<span style="float: right; margin-top=0;" id="vidas"></span>
+				</div>
+				<img id="mano" style="height: 40%; margin-bottom: 0; margin-top: 10%;" src="./silly/silly1.png">
+				<div id="botoes">
+					<button id="op1" onclick="choice1()" style="width: 100%; margin-bottom: 5px;">opcao1</button>
+					<button id="op2" onclick="choice2()" style="width: 100%;">opcao2</button>
+				</div>
+				<div id="caixa">
+					<p id="nome" style="font-weight:bold;">brother</p>
+					<p id="texto">caro amigo que bom te ver novamente :3</p>
+					<button id="prossiga" onclick="prosseguir()">▶</button>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/JavaScript">
+		
+		document.getElementById('jogo').hidden = true;
+		fase = 1;
+		vida = 3;
+		pre = 1;
+		let nome = document.getElementById("nome");
+		let texto = document.getElementById("texto");
+		
+			function start(){
+				document.getElementById('inicial').hidden = true;
+				document.getElementById('jogo').hidden = false;
+				update();
+			}
+			
+			function prosseguir(){
+				
+				if (pre == 1){
+					nome.textContent = "Eu";
+					texto.textContent = "eae mano tudo bom";
+				} else if (pre == 2){
+					nome.textContent = "brother";
+					texto.textContent = "tudo joia, ce leu meu novo livro ne? o *insert nome do livro*";
+				} else if (pre == 3){
+					nome.textContent = "Eu";
+					texto.textContent = "li sim cara hehe";
+				} else if (pre == 4){
+					nome.textContent = "brother";
+					texto.textContent = "hmmm sera mesmo??? posso te perguntar algumas coisas ent?";
+				} else if (pre == 5){
+					nome.textContent = "Eu";
+					texto.textContent = "eu nao tenho escolha ne";
+				} else if (pre == 6){
+					nome.textContent = "brother";
+					texto.textContent = "nao hehe";
+				} else if (pre == 7){
+					nome.textContent = "Eu";
+					texto.textContent = "ent vambora";
+				} else if (pre == 8){
+					nome.textContent = "brother";
+					texto.textContent = "yipeee vamos comecar";
+				} else if (pre == 9){
+					document.getElementById('prossiga').style.visibility = "hidden";
+					pergunta();
+				}
+				pre = pre + 1;
+			}
+			
+			function pergunta(){
+				if (fase == 1){
+					document.getElementById('botoes').style.visibility = "visible";
+					texto.textContent = "pergunta 1";
+					document.getElementById('op1').textContent = "verdadeiro";
+					document.getElementById('op2').textContent = "falso";
+					v = 1;
+				} else if (fase == 2){
+					texto.textContent = texto.textContent + "pergunta 2";
+					document.getElementById('op1').textContent = "falso";
+					document.getElementById('op2').textContent = "verdadeiro";
+					v = 2;
+				} else if (fase == 3){
+					texto.textContent = texto.textContent + "pergunta 3";
+					document.getElementById('op1').textContent = "falso";
+					document.getElementById('op2').textContent = "verdadeiro";
+					v = 2;
+				} else if (fase == 4){
+					texto.textContent = texto.textContent + "pergunta 4";
+					document.getElementById('op1').textContent = "verdadeiro";
+					document.getElementById('op2').textContent = "falso";
+					v = 1;
+				} else if (fase == 5){
+					texto.textContent = texto.textContent + "pergunta 5";
+					document.getElementById('op1').textContent = "falso";
+					document.getElementById('op2').textContent = "verdadeiro";
+					v = 2;
+				}
+				
+				update();
+			}
+			
+			function choice1(){
+				if (v == 1){
+					texto.textContent = "Correto!! ";
+				} else{
+					texto.textContent = "Incorreto! ";
+					vida = vida - 1;
+				}
+				fase = fase+1;
+				update();
+				pergunta();
+			}
+			
+			function choice2(){
+				if (v == 2){
+					texto.textContent = "Correto!! ";
+				} else{
+					texto.textContent = "Incorreto! ";
+					vida = vida - 1;
+				}
+				fase = fase+1;
+				update();
+				pergunta();
+			}
+			
+			function update(){
+				document.getElementById('vidas').textContent = "❤︎".repeat(vida);
+				if (vida <= 0){
+					document.getElementById('botoes').style.visibility = "hidden";
+					texto.textContent = "Claramente você não leu o livro que decepcao :(";
+				} else if (fase > 5){
+					document.getElementById('botoes').style.visibility = "hidden";
+					texto.textContent = "Claramente você leu fico mt feliz :D";
+				} else {
+					document.getElementById('contagem').textContent = fase+"/5";
+				}
+			}
+		</script>
+	</body>
+</html>
