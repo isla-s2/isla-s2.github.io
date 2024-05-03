@@ -66,7 +66,7 @@
 					<span style="float: left; margin-top=0; height: 25px;" id="contagem"></span>
 					<span style="float: right; margin-top=0;" id="vidas"></span>
 				</div>
-				<img id="imagem" style="height: 40%; margin-bottom: 0; margin-top: 10%;" src="./durkheim.jpeg">
+				<img id="imagem" style="height: 40%; margin-bottom: 0; margin-top: 10%;" src="./durkheim.png">
 				<div id="botoes">
 					<button id="op1" onclick="choice1()" style="width: 100%; margin-bottom: 5px;"></button>
 					<button id="op2" onclick="choice2()" style="width: 100%;"></button>
@@ -102,7 +102,7 @@
 				} else if (pre == 2){
 					nome.textContent = "Durkheim";
 					texto.textContent = "Mais tranquilas desde que publiquei meu mais novo livro: As Regras do Método Sociológico. Você o leu, certo?";
-					document.getElementById('imagem').src = "./pergunta.jpeg";
+					document.getElementById('imagem').src = "./pergunta.png";
 				} else if (pre == 3){
 					nome.textContent = "Eu";
 					texto.textContent = "Claro que sim!";
@@ -112,7 +112,7 @@
 				} else if (pre == 5){
 					nome.textContent = "Eu";
 					texto.textContent = "Eu tenho escolha?";
-					document.getElementById('imagem').src = "./durkheim.jpeg";
+					document.getElementById('imagem').src = "./durkheim.png";
 				} else if (pre == 6){
 					nome.textContent = "Durkheim";
 					texto.textContent = "Tem, mas nossa amizade é o que está em jogo aqui.";
@@ -190,11 +190,11 @@
 				if (vida <= 0){
 					document.getElementById('botoes').style.visibility = "hidden";
 					texto.textContent = "Fica claro para mim que você mentiu. Que decepção.";
-					document.getElementById('imagem').src = "./brabo.jpeg";
+					document.getElementById('imagem').src = "./brabo.png";
 				} else if (fase > 5){
 					document.getElementById('botoes').style.visibility = "hidden";
 					texto.textContent = "Fico feliz que tenha lido! Obrigado por apreciar meu trabalho.";
-					document.getElementById('imagem').src = "./parabens.jpeg";
+					document.getElementById('imagem').src = "./parabens.png";
 				} else {
 					document.getElementById('contagem').textContent = fase+"/5";
 				}
