@@ -6,7 +6,6 @@
 		<title>Jogo Clássicos da Sociologia: Laís e Ariany</title>
 		<style type="text/css">
 			#tela{
-				background: url(./fundo.png) no-repeat center center fixed;
 				border: 1px solid red;
 				width: 50%;
 				height: 70%;
@@ -62,12 +61,12 @@
 				<button onclick="start()">Começar</button>
 			</div>
 			
-			<div class="sub" id="jogo">
+			<div class="sub" id="jogo" style="background: url(./fundo.png) no-repeat center center fixed; background-color:white;">
 				<div style="background-color:red; overflow:hidden; padding: 5px;">
 					<span style="float: left; margin-top=0; height: 25px;" id="contagem"></span>
 					<span style="float: right; margin-top=0;" id="vidas"></span>
 				</div>
-				<img id="imagem" style="height: 40%; margin-bottom: 0; margin-top: 10%;" src="./durkheim.png">
+				<img id="imagem" style="height: 60%; margin-bottom: 0; margin-top: 10%;" src="./durkheim.png">
 				<div id="botoes">
 					<button id="op1" onclick="choice1()" style="width: 100%; margin-bottom: 5px;"></button>
 					<button id="op2" onclick="choice2()" style="width: 100%;"></button>
