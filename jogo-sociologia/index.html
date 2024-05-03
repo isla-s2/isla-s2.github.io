@@ -46,7 +46,7 @@
 			#botoes{
 				display:inline-block;
 				width: 20%;
-				background-color: green;
+				background-color: transparent;
 				margin-bottom:0;
 				padding-bottom: 20px;
 				visibility: hidden;
@@ -67,8 +67,8 @@
 				</div>
 				<img id="imagem" style="height: 40%; margin-bottom: 0; margin-top: 10%;" src="./durkheim.jpeg">
 				<div id="botoes">
-					<button id="op1" onclick="choice1()" style="width: 100%; margin-bottom: 5px;">opcao1</button>
-					<button id="op2" onclick="choice2()" style="width: 100%;">opcao2</button>
+					<button id="op1" onclick="choice1()" style="width: 100%; margin-bottom: 5px;"></button>
+					<button id="op2" onclick="choice2()" style="width: 100%;"></button>
 				</div>
 				<div id="caixa">
 					<p id="nome" style="font-weight:bold;">Durkheim</p>
@@ -131,30 +131,30 @@
 			function pergunta(){
 				if (fase == 1){
 					document.getElementById('botoes').style.visibility = "visible";
-					texto.textContent = "Primeira pergunta:";
-					document.getElementById('op1').textContent = "verdadeiro";
-					document.getElementById('op2').textContent = "falso";
-					v = 1;
+					texto.textContent = "Primeira pergunta: Quais são as 3 características dos fatos sociais? 1) Pensar, comer e crenças ou 2) A generalidade, a exterioridade e a coercitividade?";
+					document.getElementById('op1').textContent = "Alternativa 1";
+					document.getElementById('op2').textContent = "Alternativa 2";
+					v = 2;
 				} else if (fase == 2){
-					texto.textContent = texto.textContent + "Segunda pergunta:";
-					document.getElementById('op1').textContent = "falso";
-					document.getElementById('op2').textContent = "verdadeiro";
+					texto.textContent = texto.textContent + "Segunda pergunta: Diferentes fatos sociais atingem diferentes partes da população, dependendo do gênero ou da condição social dos indivíduos. Verdadeiro ou falso?";
+					document.getElementById('op1').textContent = "Verdadeiro";
+					document.getElementById('op2').textContent = "Falso";
 					v = 2;
 				} else if (fase == 3){
-					texto.textContent = texto.textContent + "Terceira pergunta:";
-					document.getElementById('op1').textContent = "falso";
-					document.getElementById('op2').textContent = "verdadeiro";
-					v = 2;
-				} else if (fase == 4){
-					texto.textContent = texto.textContent + "Quarta pergunta:";
-					document.getElementById('op1').textContent = "verdadeiro";
-					document.getElementById('op2').textContent = "falso";
+					texto.textContent = texto.textContent + "Terceira pergunta: A característica de coerção dos fatos sociais define 1) A pressão que esses fatos exercem nos indivíduos para que se comportem de uma certa maneira ou 2) A explicação dada aos indivíduos para a existência desses fatos?";
+					document.getElementById('op1').textContent = "Alternativa 1";
+					document.getElementById('op2').textContent = "Alternativa 2";
 					v = 1;
-				} else if (fase == 5){
-					texto.textContent = texto.textContent + "Quinta e última pergunta:";
-					document.getElementById('op1').textContent = "falso";
-					document.getElementById('op2').textContent = "verdadeiro";
+				} else if (fase == 4){
+					texto.textContent = texto.textContent + "Quarta pergunta: Os fatos sociais são interiores ou exteriores ao indivíduo?";
+					document.getElementById('op1').textContent = "Interiores";
+					document.getElementById('op2').textContent = "Exteriores";
 					v = 2;
+				} else if (fase == 5){
+					texto.textContent = texto.textContent + "Quinta e última pergunta: Qual dessas opções é verdadeira em relação à coerção social? 1) O indivíduo sofre uma pressão para agir conforme as tradições da sociedade ou 2) O indivíduo age conforme as tradições da sociedade e não concorda com o contrário?";
+					document.getElementById('op1').textContent = "Alternativa 1";
+					document.getElementById('op2').textContent = "Alternativa 2";
+					v = 1;
 				}
 				
 				update();
