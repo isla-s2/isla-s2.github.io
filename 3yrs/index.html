@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>owo ily</title>
+        <style type="text/css">
+            #main{
+                position: relative;
+                width: 900px;
+                height: 700px;
+                left: 50%;
+                margin-left: -450px;
+                margin-top: -40px;
+                text-align: center;
+            }
+            #album{
+                position: absolute;
+				top: 1%;
+				right: 0;
+            }
+            #carta{
+                position: absolute;
+				top: 1%;
+				left: 0;
+            }
+            #cartao{
+                position: absolute;
+				bottom: 0;
+				left: 50%;
+                margin-left: -300px;
+                height: 400px;
+            }
+            #boiolas{
+                position: absolute;
+				top: 10%;
+				left: 50%;
+                margin-left: -180px;
+                height: 350px;
+            }
+            #mudar{
+                position: absolute;
+				bottom: 1%;
+				right: 3%;
+            }
+            #carta_aberta{
+                position: relative;
+                width: min-content;
+                height: min-content;
+                top:-7px;
+                left: 50%;
+                margin-left: -307px;
+                margin-bottom: -50px;
+            }
+            #album_aberto{
+                position: relative;
+                width: 1000px;
+                height: 730px;
+                top:-20px;
+                left: 50%;
+                padding: 0px;
+                margin-left: -500px;
+                margin-bottom: -50px;
+            }
+            .voltar{
+                position: absolute;
+				top: 10px;
+				left: 10px;
+            }
+            #musga{
+                position: fixed;
+				top: 75%;
+				left: 1%;
+            }
+            @font-face {
+                font-family: moreSugarRegular;
+                src: url(fontes/MoreSugar-Regular.otf);
+            }
+            @font-face {
+                font-family: moreSugarThin;
+                src: url(fontes/MoreSugar-Thin.otf);
+            }
+            @font-face {
+                font-family: lumiosUsed;
+                src: url(fontes/LumiosTypewriter-Used.woff);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="main">
+            <img id="album" src="album.png" onclick="abrir_album()">
+            <img id="carta" src="carta.png" onclick="abrir_carta()">
+            <img id="cartao" src="cartao.png">
+            <p style="position: relative; font-size: 50px; top: 59%; font-family: moreSugarRegular; color: #b5d3ff;">FELIZ TRÊS ANOS<br>GATINHO!!!!</p>
+            <p style="position: relative; font-size: 25px; top: 50%; font-family: moreSugarRegular; color: #ffb5d6;">Espero que goste do presentinho atrasado!</p>
+            <img id="boiolas" src="boiolas 1.png">
+            <img style="position: absolute; bottom: 30%; left: 3%;" src="decor main.png">
+            <img id="mudar" src="mudar.png" onclick="roupitas()">
+        </div>
+        <div id="pg_carta" style="height:min-content;">
+            <div id="carta_aberta">
+                <img id="carta_bg" style="height: 720px;" src="carta aberta.png">
+                <p style="position: absolute; font-size: 20px; top: 7%; left: 10%; font-family: lumiosUsed; color: #b5d3ff;">Nate, meu amor,</p>
+                <div style="position: absolute; width: 480px; height: 430px; top: 15%; left: 10%; overflow: auto; font-size: 15px; font-family: lumiosUsed; color: #ffb5d6;">
+                    <p style="margin-top: 0;">FINALMENTE TERMINEI MEU PRESENTE!!!! Espero q você goste apesar do atraso, fiz com muito carinho! Deu um trabalhão também mas tô bem feliz com o resultado :D</p>
+                    <p>Cara, três anos!!!!! Meu Deus!!!!! Pode parecer pouco às vezes mas isso é tipo. 1095 dias. Se bem que pra mim o melhor jeito de entender esse número é perceber o quanto a gente mudou e pensar em todos os nossos momentos juntos até então. Além disso, 3 anos é tipo, só de namoro cara!! A gente tem mais uns 3 anos de história antes disso!!! Juro que se eu parar muito pra pensar eu nem acredito, parece ficção hehehdshjgajh imagina contar pra mini eu onde a gente tá agora!!!!</p>
+                    <p>Muito muito obrigado por estar comigo por todo esse tempo! Cê não ironicamente é uma parte extremamente importante de mim, e eu não consigo nem imaginar como teria sido a minha vida sem você.</p>
+                    <p>Mal posso esperar pra te ver de novo, e tô mais ansioso ainda pro dia que eu não precisar esperar mais sdhjgasdf juro pra ti que toda vez que penso nisso, nesse futuro contigo, eu dou tela azul e fico de boca aberta porque eu simplesmente não acredito que você é MEU NAMORADO?????? QUE????????? (eu tive que parar de escrever umas 3 vezes no mínimo pra surtar ehdjhsagdfasudyfa) </p>
+                    <p>Mas até esse tão aguardado futuro eu espero que a gente tenha muitos outros momentos bons juntos!! Espero poder ser ume namorade cada vez melhor também! Eu te amo demais eu- *explodo em mil pedaços* </p>
+                    <p style="margin-bottom: 0;">Não mas brincadeiras a parte, eu te amo tanto tanto tanto meu Deus, eu sou tão feliz de te ter na minha vida!!!!! Espero que esse amor sempre chegue em você, pra você nunca esquecer, viu?? EU TE AMO EU TE AMO EU TE AMO MUITO MUITO MEU GATINHO!!!!!!!!! <33333</p>
+                </div>
+                <p style="position: absolute; font-size: 20px; top: 73%; right: 20%; font-family: lumiosUsed; color: #b5d3ff; text-align: right;">Quase implodindo de viadagem,<br>Isla, seu amor.</p>
+                <p style="position: absolute; font-size: 15px; top: 88%; left: 23%; font-family: lumiosUsed; color: #ffb5d6;">PS: tem um botão secreto na<br>página principal, espero que goste! ;3</p>
+            </div>
+            <img class="voltar" src="voltar.png" onclick="home()">
+        </div>
+        <div id="pg_album">
+            <div id="album_aberto">
+                <img id="album_bg" style="position: absolute; z-index: -1;" src="album aberto.png">
+                <img style="height: 160px; position: absolute; top: 15%; left: 10%;" src="fotinhas/IMG-20240414-WA0091.jpg">
+                <p style="position: absolute; font-size: 20px; top: 35%; left: 19.5%; text-align:center; font-family: moreSugarThin; color: #ffb5d6;">Anime Buzz 2024<br>14/04/24</p>
+                <img style="height: 200px; position: absolute; top: 10%; right: 33%;" src="fotinhas/Screenshot_20230407-221036.png">
+                <img style="height: 200px; position: absolute; top: 10%; right: 10%;" src="fotinhas/IMG-20240824-WA0036.jpg">
+                <p style="position: absolute; font-size: 20px; top: 35%; right: 18%; text-align:center; font-family: moreSugarThin; color: #ffb5d6;">Fotinhos no shopping!</p>
+                <p style="position: absolute; font-size: 20px; top: 39%; right: 11%; text-align:center; font-family: moreSugarThin; color: #ffb5d6;">24/08/24</p>
+                <p style="position: absolute; font-size: 20px; top: 39%; right: 34.5%; text-align:center; font-family: moreSugarThin; color: #ffb5d6;">07/04/23</p>
+                <img style="height: 200px; position: absolute; bottom: 15%; left: 10%;" src="fotinhas/IMG_20240102_163213_174.jpg">
+                <img style="height: 200px; position: absolute; bottom: 15%; left: 30%;" src="fotinhas/IMG-20231022-WA0049.jpg">
+                <p style="position: absolute; font-size: 20px; bottom: 2%; left: 8.5%; text-align:center; font-family: moreSugarThin; color: #ffb5d6;">Ano novo 23-24<br>01/01/24</p>
+                <p style="position: absolute; font-size: 20px; bottom: 2%; left: 29.5%; text-align:center; font-family: moreSugarThin; color: #ffb5d6;">Anime Xtreme 23<br>22/10/23</p>
+                <img style="height: 230px; position: absolute; bottom: 15%; right: 10%;" src="fotinhas/WhatsApp Image 2025-02-18 at 17.12.06.jpeg">
+                <p style="position: absolute; font-size: 20px; bottom: 2%; right: 19%; text-align:center; font-family: moreSugarThin; color: #ffb5d6;">Festa de 16 da Isla<br>20/01/24</p>
+                <img style="position: absolute; top: 25px; left: 18px;" src="stickers album.PNG">
+            </div>
+            <img class="voltar" src="voltar.png" onclick="home()">
+        </div>
+        <iframe id="musga" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3Q7wGCIcXBSgo1H83b4IX8?utm_source=generator" width="17%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p id="btext" style="font-size: 15px; text-align:center; font-family: moreSugarThin; color: #ffb5d6; margin-top: -7px;">Feito por Isla de 13/10/2024 a 19/02/2025</p>
+    </body>
+    
+    <script type="text/JavaScript">
+        r = 1;
+
+        function home(){
+            document.getElementById('main').style.display = "block";
+            document.getElementById('pg_carta').style.display = "none";
+            document.getElementById('pg_album').style.display = "none";
+            document.getElementById('btext').style.display = "block";
+        }
+        function abrir_carta(){
+            document.getElementById('main').style.display = "none";
+            document.getElementById('pg_carta').style.display = "block";
+            document.getElementById('pg_album').style.display = "none";
+            document.getElementById('btext').style.display = "none";
+        }
+        function abrir_album(){
+            document.getElementById('main').style.display = "none";
+            document.getElementById('pg_carta').style.display = "none";
+            document.getElementById('pg_album').style.display = "block";
+            document.getElementById('btext').style.display = "none";
+        }
+        function roupitas(){
+            if (r <3 ){
+                r = r+1
+                document.getElementById('boiolas').src = "boiolas " + r + ".png";
+            }else{
+                r=0
+                roupitas()
+            }
+        }
+
+        home()
+    </script>
+</html>
