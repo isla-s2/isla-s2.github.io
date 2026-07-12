@@ -1,0 +1,174 @@
+@import url('https://fonts.cdnfonts.com/css/singsong');
+@import url('https://fonts.cdnfonts.com/css/fredoka');    
+
+html, body {
+  height: 100%;
+}
+
+body{
+  background-image: url("bg_bg.gif");
+  box-shadow: inset 0 0 0 1000px #ffffff33;
+  background-size: 50px 50px;
+  display: flex;
+  flex-direction: column;
+  color: #EE399E;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 12px;
+  margin: 0;
+}
+p{
+  margin: 0;
+}
+
+.titulo{
+  display: flex;
+  align-items: center;
+  color: #FF66BB;
+}
+.titulo h1 {
+  margin: 0;
+  font-family: 'Singsong', sans-serif;
+  font-size: 50px;
+  margin-right: 15px; 
+}
+
+#info_l{
+  margin-right: 15px;
+}
+#info_l > *{
+  margin-bottom: 10px;
+}
+#info_l, #info_r{
+  position: relative;
+  width: fit-content;
+  margin-top: 40px;
+}
+
+.textbox{
+  max-width: 300px;
+  background-image: url("txt_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: scroll;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px #ffdff166;
+  padding: 5px;
+  border: 2.5px solid #FF66BB;
+}
+.textbox > div {
+  border: 2.5px dashed #FF66BB;
+  padding: 10px;
+}
+#t_left{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+#t_right{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#t_table{
+  max-width: 260px;
+}
+
+.button{
+  float: right;
+  background-image: radial-gradient(#FF8BCB, #FFB3DD);
+  border: 2.5px solid #EE399E;
+  color: #EE399E;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 25px;
+}
+.button:hover{
+  background-image: none;
+  background-color: #EE399E;
+  color: #FFB3DD;
+  
+}
+
+#figure{
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+}
+
+#spin{
+  position: absolute;
+  bottom: -20px;
+  left: 60px;
+}
+
+#table th{
+  text-align: left;
+  width: 45%;
+}
+#table th, td{
+  padding-bottom: 15px;
+  vertical-align: top;
+}
+#table tr:last-of-type th, tr:last-of-type td{
+  padding-bottom: 0;
+}
+
+.quote {
+  max-width: 200px;
+  font-size: 20px;
+  border-left: 10px solid #EE399E;
+  font-weight: bold;
+  margin: 20px 20px;
+  padding: 0 10px;
+}
+
+.audio{
+  width: 180px;
+}
+
+#full{
+  position: absolute;
+  top: 50px;
+  right: -180px;
+}
+
+#gallery{
+  max-width: 480px;
+  margin: 10px 0 10px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#gallery > div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#main{
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 60px;
+}
+footer {
+  flex-shrink: 0;
+  background-color: #FFB3DD;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 7px;
+}
+footer p {
+  margin: 7px 0;
+}
+footer div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer img{
+  margin-left: 5px;
+}
